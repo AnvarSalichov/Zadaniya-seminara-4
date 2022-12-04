@@ -4,20 +4,21 @@
 // 3, 5 -> 243 (3⁵)
 // 2, 4 -> 16
 
-Console.WriteLine("Введите число A для возведения в степень");
+Console.WriteLine("Введите число для возведения в степень");
 double A = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите степень N для числа A");
-int N = Convert.ToInt32(Console.ReadLine());
-double res=1;
-if (N<0)
-Console.WriteLine("Число N может быть равно 0 или быть целым положительным");
-else
+Console.WriteLine("Введите степень");
+int B = Convert.ToInt32(Console.ReadLine());
+
+double Stepennum(double A, int B)
 {
-for (int i = 1; i <= N; i++)
+    double result = 1;
+    for (int i = 1; i <= B; i++)
     {
-    res=res*A;
+    result=result*A;
     }
-Console.WriteLine("Число "+A+" в степени "+N+" равно "+res);
+    return result;
 }
 
-//int GetStepenNum (int res);
+double result = Stepennum(A, B);
+
+Console.WriteLine("Число "+A+" в степени "+B+" равно "+result);
